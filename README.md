@@ -13,6 +13,9 @@
 - load_dotenv
 - gTTS
 
+![image](https://github.com/SeungIlJang/AI_LLM_ChatGPT_Role_Playing_WEB/assets/45052948/bde68a4b-b244-4f47-8111-56944ddb9edb)
+
+
 ![image](https://github.com/SeungIlJang/AI_LLM_ChatGPT_Role_Playing_WEB/assets/45052948/c999a44e-eac1-4e73-83a2-39da0978f549)
 
 ### 참고사항
