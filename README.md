@@ -18,40 +18,40 @@
 
 ![image](https://github.com/SeungIlJang/AI_LLM_ChatGPT_Role_Playing_WEB/assets/45052948/c999a44e-eac1-4e73-83a2-39da0978f549)
 
-### 참고사항
-#### 가상환경 활성화
+### Reference
+#### Enable virtual environment
 - ./venv/Scripts/activate
 
 - pip install django==4.2.1 --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org
 - pip install python-dotenv==1.0.0 --trusted-host pypi.python.org --trusted-host files.pythonhosted.org --trusted-host pypi.org
 
-#### 1) 프로젝트 생성할 경로로 이동합니다.
-#### 2) 가상환경 활성화가 필요하다면 해주세요.
+#### 1) Navigate to the path you want to create the project.
+#### 2) If you need to activate the virtual environment, please do it.
 - cd ~/workspace/django-channels-gpt-role-playing
 
-#### 3)현재 경로에 장고 프로젝트를 생성합니다.
-#### 명령 끝에 마침표(.)를 빼먹지 마세요.
+#### 3) Create a Django project in the current path.
+#### Don't miss a period (.) at the end of a command.
 - python -m djang startproject mysite .
-#### 디폴트 데이터 베이스 생성
+#### Create Default Database
 - python manage.py migrate 
-#### 첫 superuser를 생성 terry/79jasi
+#### Create the first superuser user/1234
 - python manage.py createsuperuser
 
-#### 4) chat 앱 생성
+#### 4) Create a chat app
 - python manage.py startapp chat
 
-#### 5) settings.INSTALLED_APPS에 "chat"추가
+#### 5) settings.INSTALLED_APPS add "chat"
 INSTALLED_APPS = [
 	# ...
 	"chat"
  ]
 
-#### 6) chat/urls.py 파일생성
+#### 6) Create chat/urls.py file
 - from django.urls import path
 - from . import views
 - urlpatterns = []
 
-#### 7) mysite/urls.py에 통합
+#### 7) Integrated into mysite/urls.py
 - from django.contrib impot adimn
 - from django.urls import paht, include
 
@@ -60,18 +60,18 @@ urlpatterns = [
 	path("",include("chat.urls"))
 ]
 
-#### 환경변수가 장고 setttings에 잘 반영되었는지 확인
+#### Ensure that environmental variables are well reflected in long-range settings
 - python manage.py shell
 - from django.conf import settings
 - settings.OPENAI_API_KEY
 
-#### database 생성 chat/models.py
+#### Create database chat/models.py
 - python manage.py makemigrations chat
-#### database 반영 chat/models.py- 
+#### Reflect database chat/models.py- 
 - python manage.py migrate chat
 ##### >python
 ##### >>>from chat.translators import google_translate
 ##### >>>google_translate("Hello World", "auto", "en")
 
-#### 서버구동
+#### Run Server
 ##### >python manage.py runserver
