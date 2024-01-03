@@ -38,15 +38,14 @@
 - python manage.py startapp chat
 
 #### 5) settings.INSTALLED_APPS에 "chat"추가
--INSTALLED_APPS = [
--	# ...
--	"chat"
-- ]
+INSTALLED_APPS = [
+	# ...
+	"chat"
+ ]
 
 #### 6) chat/urls.py 파일생성
 - from django.urls import path
 - from . import views
-
 - urlpatterns = []
 
 #### 7) mysite/urls.py에 통합
@@ -66,11 +65,10 @@ urlpatterns = [
 #### database 생성 chat/models.py
 - python manage.py makemigrations chat
 #### database 반영 chat/models.py- 
-- python manage.py migrate chat
-
-- >python
-- >>>from chat.translators import google_translate
-- >>>google_translate("Hello World", "auto", "en")
+ python manage.py migrate chat
+ >python
+ >>>from chat.translators import google_translate
+ >>>google_translate("Hello World", "auto", "en")
 
 ####서버구동
-- >python manage.py runserver
+>python manage.py runserver
