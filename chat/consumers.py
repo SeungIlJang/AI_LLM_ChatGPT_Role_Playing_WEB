@@ -79,7 +79,7 @@ class RolePlayingRoomConsumer(JsonWebsocketConsumer):
             self.gpt_messages.append(GptMessage(role="user", content=user_query))
 
         response_dict = openai.ChatCompletion.create(
-            model="gpt-3.5-turbo",
+            model="gpt-4",
             messages=self.gpt_messages,
             temperature=1,
         )
