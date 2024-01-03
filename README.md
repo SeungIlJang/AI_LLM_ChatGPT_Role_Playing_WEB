@@ -65,10 +65,10 @@ urlpatterns = [
 #### database 생성 chat/models.py
 - python manage.py makemigrations chat
 #### database 반영 chat/models.py- 
- python manage.py migrate chat
- >python
- >>>from chat.translators import google_translate
- >>>google_translate("Hello World", "auto", "en")
+- python manage.py migrate chat
+##### >python
+##### >>>from chat.translators import google_translate
+##### >>>google_translate("Hello World", "auto", "en")
 
-####서버구동
->python manage.py runserver
+#### 서버구동
+##### >python manage.py runserver
